@@ -13,6 +13,7 @@ export default new Router({
     {
       path: '/',
       component: Index,
+      redirect:'/board'
       children: [
         {
           path: 'board',
