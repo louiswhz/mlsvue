@@ -1,11 +1,6 @@
 <template>
   <div class="m-index">
-    
-    <section>
-      <router-view></router-view>
-    </section>
-    
-  </div>
+    <router-view></router-view>
 </template>
 
 <script>
