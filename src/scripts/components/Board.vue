@@ -6,7 +6,7 @@
         <span class="affirm yo-ico">&#xe60d;</span>
     </div>
     <section>
-      <router-view></router-view>
+      
     </section>
     <div class="m-tabbar">
         <div>
