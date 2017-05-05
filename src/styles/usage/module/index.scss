@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+.m-index {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  section{
+    overflow-y: scroll;
+    @include flex();
+    width: 100%;
+  }
+}
