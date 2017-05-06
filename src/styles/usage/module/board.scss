@@ -21,5 +21,44 @@
     		}
     	}
     }
+	.assortment{
+		@include flexbox();
+  		@include flex-direction();
+  		background: #fff;
+  		margin-bottom: .1rem;
+  		div{
+  			width: 25%;
+  			padding: .1rem;
+  			i{
+  				display: inline-block;
+				margin-top: .05rem;
+  			}
+  			img{
+  				width: 100%;
+  			}
+  		}
+	}
+	.today{
+		@include flexbox();
+		@include flex-direction(column);
+		height: 2.80rem;
+		background: #fff;
+		text-align: center;
+		font-size: .175rem;
+		margin-bottom: .1rem;
+		div{
+			margin-top: .225rem;	
+		}
+		p{
+			padding: .125rem;
+			img{
+				width: 100%;
+				height: 100%;
+				border-radius: .1rem;
+			}
+		}
+		
+	}
+
   }
 }
