@@ -1,0 +1,114 @@
+.m-classify{
+	@include flex();
+  overflow-y:scroll;
+  width:100%;
+  .a-classify {
+    height: .47rem;
+    margin-top: .1rem;
+    background: #fff;
+    border-bottom: 2px solid #f8f8f8;
+    line-height: .47rem;
+    padding-left: .1rem;
+  }
+  .classify-list {
+    background: #fff;
+    > ul {
+     	@include flexbox();
+		width:100%;
+		@include flex-wrap(wrap)
+      li {
+        width: 25%;
+        border-right: 1px solid #f8f8f8;
+        border-bottom:1px solid #f8f8f8; 
+        img {
+          width: 100%;
+        }
+      }
+      li:nth-of-type(4n){
+        border-right: none;
+      }
+    }
+  }
+  .pop-hot-new{
+    @include flexbox();
+    @include justify-content(space-between);
+    background: #fff;
+    margin-top: .1rem;
+    font-size: .15rem;
+    padding:0 .225rem;
+    padding-bottom: .14rem;
+    i{
+      display:block;
+      @include border(0 0 2px 0,#000)
+      padding: .08rem 0;
+    }
+  }
+  .c-fashion-list{
+  	@include flexbox();
+    @include flex-direction(column);
+    background: #fff;
+    padding:0 .14rem;
+    ul{
+      @include flexbox();
+      @include flex-direction(row);
+      flex-wrap:wrap;
+      width:100%;
+      li:nth-of-type(2n+1){
+      	padding:0 .035rem 0 0;
+      }
+      li:nth-of-type(2n){
+      	padding:0 0 0 .035rem;
+      }
+      li{
+        width: 50%; 
+        div:nth-of-type(1){
+			height:2.2rem;
+			overflow:hidden;
+			@include border-radius(.1rem)
+			img{
+	          width: 100%;
+	          height:100%;
+	        }
+        }
+        div:nth-of-type(2){
+          @include flexbox();
+          @include justify-content(space-between);
+          font-size: .14rem;
+          text-align: center;
+          padding: .09rem 0;
+          i{
+            display: inline-block;
+            width: 25%;
+            b{
+            	color:#fff;
+            	background:#f9014f;
+            	display:block;
+            	width:.31rem;
+            	font-size:.09rem;
+            	@include border-radius(0 .07rem 0 .07rem)
+            }
+          }
+          span{
+            display: inline-block;
+            width: 75%;
+            overflow: hidden;
+            font-size:.13rem;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+          }
+        }
+        div:nth-of-type(3){
+          @include flexbox();
+          padding-bottom:.25rem;
+          span{
+            color: #e0e0e0;
+          }
+          i{
+            color: #f9014f;
+            font-size:.13rem;
+          }
+        }
+      }
+    }
+  }
+}
