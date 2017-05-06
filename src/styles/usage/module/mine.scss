@@ -1,0 +1,127 @@
+@charset 'UTF-8';
+
+@import "../fragment/yo-header";
+
+@include yo-header(
+  $bgcolor: #fff,
+  $color: #000,
+  $font-size: .16rem,
+  $item-ico-color: #000
+){
+  font-weight: 100;
+  height:.4rem;
+  @include border(0 0 0 0,#000)
+  .regret {
+    font-size: .19rem !important;
+    &.hide {
+      display: none
+    }
+  }
+}
+
+.m-mine {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  header{
+    height:.46rem;
+    width: 100%;
+    z-index: 10;
+    color:#424242;
+   
+    
+  }
+  section{
+    overflow-y: scroll;
+    @include flex();
+    @include flex-direction(column);
+    width: 100%;
+    text-align: center;
+     background: white;
+    .zhanghao{
+       font-size: .13rem; 
+       margin-top:.12rem;
+       margin-bottom:.12rem;
+       span{
+        position: absolute;
+        right:.15rem;
+        color:#ff3064;
+       }
+    }
+    input{
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+      
+    }
+    .shouji{
+       font-size: .23rem;
+       line-height: .48rem;
+        width:3.42rem;
+        height:.48rem;
+        text-align: center;
+        color:#999999;
+    }
+    .pic{
+     @include flexbox();
+        .pic1{
+            padding-left:.15rem;
+        }
+         .pic2{
+            padding-right:.15rem;
+        }
+        li{
+          padding: .1rem;
+            img{
+            width:100%;
+            height:100%;
+          
+            }
+        }
+    }
+    .denglu{
+        width:3.44rem;
+        height:.52rem;
+        border-radius: .05rem;
+        margin-top:.15rem;
+        border-bottom: 0;
+        font-size: .15rem;
+        color:white;
+        margin-bottom: .2rem;
+    }
+    .zhuce{
+     @include flexbox();
+     padding-left:.15rem;
+     padding-right:.15rem;
+      justify-content: space-between;
+      margin-bottom: .5rem;
+      .zhucezh{
+        color:#ff255b;
+      }
+    }
+    .xian{
+    
+        span{
+            height:.02rem;
+            background:#ff255b ;
+            width:1.18rem;
+            display:inline-block;
+            background-size:100%;
+            
+        }
+    }
+       .pic111{
+     @include flexbox();
+     justify-content: space-around;
+        margin-top:.2rem;
+        li{
+             width:.45rem;   
+            img{
+            width:100%;
+            height:100%;
+          
+            }
+        }
+    }
+  }
+}
