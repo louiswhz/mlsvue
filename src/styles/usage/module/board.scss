@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+
+.m-board {
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  section{
+    overflow-y: scroll;
+    @include flex();
+    width: 100%;
+    .mint-swipe{
+    	height: 2.4rem;
+    	.mint-swipe-items-wrap{
+    		height: 2.4rem;
+    		.mint-swipe-item{
+    			height: 2.4rem;
+    			img{
+    				width: 100%;
+    			}
+    		}
+    	}
+    }
+  }
+}
