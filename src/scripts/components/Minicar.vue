@@ -20,7 +20,7 @@
 	  
 	  <div class="car_love">
 	  	
-		<h3>猜你喜欢</h3>
+		<h3>升高猜你喜欢</h3>
 		<div class="love_list">
 
 		  	<div class="beau_girl" v-for="(item, index) in list">
