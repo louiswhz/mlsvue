@@ -26,10 +26,16 @@
         <p><img src="http://s2.mogucdn.com/p2/170504/arkmaster_3jdgj04a1l001l0910e9jg4kd3e1e_750x430.jpg_640x999.v1c96.70.webp"></p>
       </div>
 
-      <div class="ming-pop"  v-for="(item, index) in list">
-        <ul>
-          <li><img :src="item.image"/></li>
-        </ul>
+      <div class="ming-pop">
+        <div>正在流行</div>
+        <div class="scroll">
+          <ul>
+            <li v-for="(item, index) in list"><img :src="item.image"/></li>
+          </ul>
+          <ul>
+            <li v-for="(item, index) in list2"><img :src="item.image"/></li>
+          </ul>
+        </div>
       </div>
     </section>
     <div class="m-tabbar">
@@ -54,6 +60,7 @@
   export default {
     data(){
       return {
+        list2:[],
         list: [],
         title: ''
       }
@@ -67,7 +74,8 @@
         method: 'get',
         callback: function (res) {
           that.title = res.data.title
-          that.list = that.list.concat(res.data.image)
+          that.list = that.list.concat(res.data.data.topic[0].goodsList)
+          that.list2 = that.list2.concat(res.data.data.topic[1].goodsList)
         }
       })
     }

@@ -57,9 +57,40 @@
 				height: 100%;
 				border-radius: .1rem;
 			}
-		}
-		
+		}	
 	}
+  .ming-pop{
+      @include flexbox();
+      @include flex-direction(column);
+      height: 2.80rem;
+      background: #fff;
+      text-align: center;
+      font-size: .175rem;
+      margin-bottom: .1rem;
+    div{
+      margin-top: .225rem;  
+    }
+    .scroll{
+      overflow-x:scroll;
+    }
+    ul{
+      @include flexbox();
+      padding:0 .1rem;
+      li{
+        @include flexbox();
+        @include flex-direction(column);
+        img{
+          padding:0 .05rem;
+          width: .825rem;
+          height: .825rem;
+          border-radius: .1rem;
+        }
+      }
+    }
+    ul:last-child{
+      padding: .1rem;
+    }
+  }
 
   }
 }
