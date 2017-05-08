@@ -1,0 +1,199 @@
+
+.m_car{
+    background: #f2f5f8;
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100%;
+    height: 100%;
+    .car_header{
+        width: 100%;
+        height: .48rem;
+        text-align: center;
+        line-height: .48rem;
+        font-size: .18rem;
+        color: #282828;
+        background: #fff;
+    }
+    .section{        
+        overflow-y:scroll;
+        .car_tis{
+            
+            background: #fff;
+            padding:0 .15rem ;
+             @include flexbox();
+             width: 100%;
+             height:.46rem;
+             p{
+                  color: #8f8f8f;
+                  font-size: .12rem;
+                 line-height: .16rem;
+                 padding:.07rem .12rem .1rem 0;
+                 @include flex(4)
+             }
+             span{
+                 margin-top: .08rem;
+                 @include flex(1)
+                 height: .3rem;
+                 background: #e40046;
+                 text-align: center;
+                 line-height: .3rem;
+                 color: #fff;
+                 font-size: .12rem;
+                 @include border-radius(5px)
+             }
+        }
+        
+        .car_go{
+            margin-top: .1rem;
+            background: #fff;
+            @include flexbox();
+            @include flex-direction(column);
+            width: 100%;
+            .car_lq{
+                width: 100%;
+                height: .5rem;
+                line-height: .5rem;
+                @include flexbox();
+                @include justify-content(space-between);
+                @include border(0 0 1px 0,#dbdbdb )
+                padding: 0 .15rem;
+                .lq_xz{
+                    font-size: .14rem;
+                    i{                        
+                        color: #999;
+                        padding-right:.1rem ;
+                   }
+                   b{
+                       font-weight: normal;
+                       color: #333;                      
+                   }
+                }
+                span{
+                    font-size: .12rem;
+                    color: #e40046;
+                }
+                
+            }
+        }
+        
+        
+        
+        .car_love{
+            background: #fff;
+            margin-top: .1rem;
+             h3{
+                 height: .3rem;
+                 color: #5c5c5c;
+                 font-size: .14rem;
+                 line-height: .3rem;
+                 text-align: center;
+             }
+             width:100%;
+              .love_list{                                
+                 padding:0 .1rem ;
+                 @include flexbox();
+                 @include flex-wrap(wrap);
+                  .beau_girl{                      
+                      @include flexbox();
+                      @include flex-direction(column);
+                      width:50%;
+//                    height: 2.4rem;
+                      padding:0 .05rem ;
+                      font-size: .12rem;
+                      padding-bottom: .1rem;
+                      .girl_tu{
+                          width:100%;
+                          @include border-radius(10px)
+                           overflow: hidden;  
+                           height: 2rem;   
+                           img{
+                               width: 100%;
+                               height: 100%;
+                           }                       
+                      }
+                      p{
+                          padding-top: .03rem;
+                          
+                          color: #333;
+                         @include ellipsis(null,1)    
+                     }
+                     .girl_price{                         
+                         width: 100%;
+                         @include flexbox();
+                          @include justify-content(space-between);
+                          .price_span{
+                              color: #e40046;
+                              b{                              
+                              font-weight: normal;
+                             }
+                          }
+                          
+                          span{
+                              color: #999;
+                              i{
+                                  font-size: .14rem;
+                              }                             
+                          }
+                     }
+                  }
+              }
+             .car_footer{
+                 text-align: center;
+                 width: 100%;
+                 height: .4rem;
+                 line-height: .4rem;
+                 font-size: .12rem;
+                 color: #999;
+             }
+        }
+
+    }
+    
+     .car_account{
+         height: .5rem;
+         width: 100%;
+         padding-left: .15rem;
+         background: #fff;
+        @include flexbox();        
+        @include border(0 0 1px 0,#dbdbdb )
+        .car_checkbox{
+            line-height: .5rem;
+            @include flex(4);
+            i{
+                font-size: .14rem;
+                color: #999;
+                padding-right:.1rem ;
+            }
+            b{
+                font-weight: normal;
+                color: #333;
+                font-size: .14rem;                
+            }
+            
+        }
+        
+        .car_zj{
+            @include flex(3.5)
+            @include flexbox();
+            @include flex-direction(column);
+            font-size: .12rem;
+            p{
+                padding-top: .05rem;
+                color: #ed2a5f;
+            }
+            i{
+                color: #a0a0a0;
+            }
+        }
+        .car_js{
+             @include flex(3)
+             font-size: .16rem;
+             line-height: .5rem;
+             background: #e40046;
+             color: #fff;
+             text-align: center;
+        }
+     }
+          
+}
+

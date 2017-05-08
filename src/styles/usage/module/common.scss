@@ -17,7 +17,11 @@ $base-color: #00b38a;
   src: url('/static/iconfont/iconfont1.woff') format('woff'),
   url('/static/iconfont/iconfont1.ttf') format('truetype')
 }
-
+@font-face {
+  font-family: 'yofont';
+  src: url('/static/iconfont/iconfont8.woff') format('woff'),
+  url('/static/iconfont/iconfont8.ttf') format('truetype')
+}
 @import "../fragment/yo-header";
 
 @include yo-header(
@@ -35,9 +39,11 @@ $base-color: #00b38a;
       display: none
     }
   }
+  .left{
+    left:0;
+  }
 }
 .m-tabbar {
-  height: .5rem;  
   width: 100%;
   z-index:10;
   > div {
