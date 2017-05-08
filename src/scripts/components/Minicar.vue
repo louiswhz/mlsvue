@@ -3,7 +3,8 @@
 		
 	<div class="car_header">购物车（1）</div>
 	
-	<div class="section">
+	<section>
+		<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :autoFill="false" ref="loadmore">
 
 	  <div class="car_tis">
 	    <p>温馨提示：现在登录，你可以同步电脑和手机购物车中的商品.</p><span>登录</span>
@@ -19,11 +20,12 @@
 	  
 	  <div class="car_love">
 	  	
-		<h3>猜你喜欢高升</h3>
+		<h3>猜你喜欢</h3>
 		<div class="love_list">
+
 		  	<div class="beau_girl" v-for="(item, index) in list">
 		  		<div class="girl_tu">
-		  			<img :src="item.image"/>
+		  			<img v-lazy.container="item.image"/>
 		  		</div>
 		  		<p v-html="item.title"></p>
 		  		<div class="girl_price">
@@ -34,12 +36,14 @@
 		  		</div>	 		
 		  	</div>
 	  	</div>	
-	  	<div class="car_footer">
+	  		  	
+	 </div>	 
+	 </mt-loadmore>
+	 <div class="car_footer">
 	  		已经到底了
-	  	</div>
-	  </div>
-	  
-  </div>
+	 </div>
+	 
+  </section>
        
       
 	  <div class="m-tabbar">
@@ -65,23 +69,54 @@
 
 <script>
 	import Vue from 'vue'
+	
+	import { Loadmore } from 'mint-ui';	
+    Vue.component(Loadmore.name, Loadmore);
+    
+	import { Indicator } from 'mint-ui';
+	
+	import { Lazyload } from 'mint-ui';
+    Vue.use(Lazyload);
+  
 	import utilAxios from '../utils/axios'
 	  export default {
 	    data(){
 	      return {
 	        list: [],
-	        title: ''
+	        title: '',
+	        allLoaded: false
 	      }
         },
+    methods: {
+      loadTop: function () {
+	    this.$refs.loadmore.onTopLoaded();
+      },
+      loadBottom: function () {
+        let that = this
+        utilAxios.get({
+          url: 'api/goodsunit/aj/wall?offset=0&frame=0&trace=0&limit=2&endId=0&id=6265',
+          method: 'get',
+          callback: function (res) {
+	          that.title = res.data.data.rows
+	          that.list = that.list.concat(res.data.data.rows)
+	        }
+        })
+      }
+    },        
         mounted: function () {
 	      let that = this
+	      Indicator.open({
+	        text: '加载中...',
+	        spinnerType: 'fading-circle'
+	     });
 	      utilAxios.get({
 	        url: 'api/goodsunit/aj/wall?offset=0&frame=0&trace=0&limit=20&endId=0&id=6265',
 	        method: 'get',
+	        
 	        callback: function (res) {
-//	        	console.log(res.data.data.rows)
 	          that.title = res.data.data.rows
 	          that.list = that.list.concat(res.data.data.rows)
+	          Indicator.close()
 	        }
 	      })
 	    }
