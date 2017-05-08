@@ -5,6 +5,7 @@ import Board from '@/scripts/components/Board'
 import Classify from '@/scripts/components/Classify'
 import Minicar from '@/scripts/components/Minicar'
 import Mine from '@/scripts/components/Mine'
+import Home from '@/scripts/components/Home'
 
 Vue.use(Router)
 
@@ -30,7 +31,11 @@ export default new Router({
         {
           path: 'mine',
           component: Mine
-        }
+        },
+       {
+      path: 'home',
+      component: Home
+    	}
       ]
     }
   ]

@@ -23,12 +23,12 @@
 			<div class="zhuce">
 				<span class="haiwai">海外手机</span>
 				<span class="mianmi">免密登录</span>
-				<span class="zhucezh">注册账号</span>
+				<span class="zhucezh"> <router-link to="/Home">注册账号</router-link></span>
 			</div>
 			<div class="xian">
-			<sapn class="left"></sapn>
+			
 			其他登录方式
-			<sapn class="right"></sapn>
+			
 			</div>
 			<ul class="pic111">
 				<li class="pic11"><img src="../../../images/images/4.jpg"/></li>
