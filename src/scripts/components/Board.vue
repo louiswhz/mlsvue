@@ -26,9 +26,10 @@
         <p><img src="http://s2.mogucdn.com/p2/170504/arkmaster_3jdgj04a1l001l0910e9jg4kd3e1e_750x430.jpg_640x999.v1c96.70.webp"></p>
       </div>
 
-      <div class="pop">
-        <div></div>
-        <div></div>
+      <div class="ming-pop"  v-for="(item, index) in list">
+        <ul>
+          <li><img :src="item.image"/></li>
+        </ul>
       </div>
     </section>
     <div class="m-tabbar">
@@ -48,8 +49,27 @@
   import 'mint-ui/lib/style.css'
   Vue.component(Swipe.name, Swipe)
   Vue.component(SwipeItem.name, SwipeItem)
+  import utilAxios from '../utils/axios'
 
   export default {
-    
+    data(){
+      return {
+        list: [],
+        title: ''
+      }
+    },
+
+    mounted: function () {
+      let that = this
+      let type = that.$route.params.type
+      utilAxios.get({
+        url: '/mls/venus/collection/v1/queryTopicCollocation/android?st=1492776749&_did=e06faa906461fdb2849043851d88795f&_res=1080*1920&imei=867830028775635&_version=905&mac=20%3A82%3Ac0%3A3b%3Aa1%3A4b&_channel=MALmiui&build_serial=edc2b347&page=2&_sign=a32c174a8a5f0cf2c13980528a732e98d3068809',
+        method: 'get',
+        callback: function (res) {
+          that.title = res.data.title
+          that.list = that.list.concat(res.data.image)
+        }
+      })
+    }
   }
 </script>
