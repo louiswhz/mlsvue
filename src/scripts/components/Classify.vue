@@ -31,7 +31,7 @@
       <mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :autoFill="false" ref="loadmore">
         <div class="c-fashion-list">
             <ul>
-              <router-link :to="`/detail/${item.signGoodsId}`" tag='li' v-for="(item,index) in classifydatalist" :key="index">
+              <router-link :to="`/tobuy/${item.signGoodsId}`" tag='li' v-for="(item,index) in classifydatalist" :key="index">
                 <div><img :src="item.image"/></div>
                 <div><i><b>优选</b></i><span v-html="item.title"></span></div>
                 <div><i>￥</i><i v-text="item.price"></i><span><b></b></span></div>

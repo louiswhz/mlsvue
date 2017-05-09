@@ -7,20 +7,10 @@ $base-color: #00b38a;
   width: 100%;
 }
 
-@font-face {font-family: "iconfont";
-  src: url('/static/iconfont/iconfont.eot'); /* IE9*/
-  src: url('/static/iconfont/iconfont.svg#iconfont') format('svg'), /* iOS 4.1- */
-  url('/static/iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
-  url('/static/iconfont/iconfont.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ 
 @font-face {
   font-family: 'iconfont';
   src: url('/static/iconfont/iconfont.woff') format('woff'),
   url('/static/iconfont/iconfont.ttf') format('truetype')
-}
-@font-face {
-  font-family: 'yofont';
-  src: url('/static/iconfont/iconfont8.woff') format('woff'),
-  url('/static/iconfont/iconfont8.ttf') format('truetype')
 }
 @import "../fragment/yo-header";
 

@@ -1,6 +1,5 @@
 <template lang="html">
-	<div class="m_car">
-		
+	<div class="m_car">		
 	<div class="car_header">购物车（1）</div>
 	
 	<section>
@@ -22,7 +21,6 @@
 	  	
 		<h3>猜你喜欢</h3>
 		<div class="love_list">
-		  	<div class="beau_girl" v-for="(item, index) in list" :key="index">
            <router-link :key="index" :to="`/tobuy/${item.signGoodsId
 			}`" tag="div" class="beau_girl" v-for="(item, index) in list">        
 		  		<div class="girl_tu">
@@ -37,17 +35,15 @@
 		  		</div>	 		
 		  	
 		  	</router-link>  
+		  		 </div>	 
 	  	</div>	
 	  		  	
-	 </div>	 
+
 	 </mt-loadmore>
 	 <div class="car_footer">
 	  		已经到底了
 	 </div>
-	 
   </section>
-       
-      
 	  <div class="m-tabbar">
 	  	<div class="car_account">
       	 <div class="car_checkbox"><i class="yo-ico">&#xe6bf;</i><b>全选</b></div>
