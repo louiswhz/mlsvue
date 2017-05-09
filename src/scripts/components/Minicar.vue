@@ -21,7 +21,7 @@
 	  	
 		<h3>猜你喜欢高升</h3>
 		<div class="love_list">
-		  	<div class="beau_girl" v-for="(item, index) in list">
+		  	<div class="beau_girl" v-for="(item, index) in list" :key="index">
 		  		<div class="girl_tu">
 		  			<img :src="item.image"/>
 		  		</div>
@@ -52,10 +52,10 @@
       	 <span class="car_js">去结算(<i>0</i>)</span>
       </div>
 	        <div>
-	          <router-link to="/board"><i class="yo-ico">&#xe729;</i><b>首页</b></router-link>
-	          <router-link to="/classify"><i class="yo-ico">&#xe612;</i><b>分类</b></router-link>
-	          <router-link to="/minicar" active-class='active'><i class="yo-ico">&#xe678;</i><b>购物车</b></router-link>
-	          <router-link to="/mine"><i class="yo-ico">&#xe629;</i><b>我</b></router-link>
+	          <router-link to="/board"><i class="iconfont yo-ico">&#xe607;</i><b>首页</b></router-link>
+	          <router-link to="/classify"><i class="yo-ico iconfont">&#xe612;</i><b>分类</b></router-link>
+	          <router-link to="/minicar"  active-class="active"><i class="yo-ico iconfont">&#xe678;</i><b>购物车</b></router-link>
+	          <router-link to="/mine"><i class="yo-ico iconfont">&#xe78c;</i><b>我</b></router-link>
 	       </div>
 	    </div>
 	    			

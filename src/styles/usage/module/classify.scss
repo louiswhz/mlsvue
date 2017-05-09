@@ -33,18 +33,23 @@
     }
   }
   .pop-hot-new{
-    @include flexbox();
-    @include justify-content(space-between);
-    background: #fff;
-    margin-top: .1rem;
-    font-size: .15rem;
-    padding:0 .225rem;
-    padding-bottom: .14rem;
-    i{
-      display:block;      
+    .mint-navbar{
+      @include flexbox();
+      @include justify-content(space-between);
+      background: #fff;
+      margin-top: .1rem;
+      font-size: .15rem;
+      padding:0 .225rem;
+      padding-bottom: .14rem;
+    }   
+    .mint-tab-item{
+      flex:inherit;
+      display:inline-block;
+      color:#000;    
       padding: .08rem 0;
-      &.active{
+      &.is-selected{
         @include border(0 0 2px 0,#000)
+        border-bottom:none;
       }
     }
   }

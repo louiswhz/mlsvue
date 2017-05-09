@@ -11,9 +11,22 @@
         </ul>
       </div>
       <div class="pop-hot-new">
-        <i @click='abc(6265)'>流行</i> 
+<!--         <i @click='abc(6265)'>流行</i> 
         <i @click='abc(6264)'>热销</i> 
-        <i @click='abc(6263)'>上新</i>
+        <i @click='abc(6263)'>上新</i> -->
+        <mt-navbar v-model="selected">
+          <mt-tab-item id="1"><p @click='abc(6265)'>流行</p></mt-tab-item>
+          <mt-tab-item id="2"><p @click='abc(6264)'>热销</p></mt-tab-item>
+          <mt-tab-item id="3"><p @click='abc(6263)'>上新</p></mt-tab-item>
+        </mt-navbar>
+        <mt-tab-container v-model="selected">
+          <mt-tab-container-item id="1">
+          </mt-tab-container-item>
+          <mt-tab-container-item id="2">
+          </mt-tab-container-item>
+          <mt-tab-container-item id="3">
+          </mt-tab-container-item>
+        </mt-tab-container>
       </div>     
       <mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :autoFill="false" ref="loadmore">
         <div class="c-fashion-list">
@@ -29,10 +42,10 @@
     </section>
     <div class="m-tabbar">
         <div>
-          <router-link to="/board"><i class="yo-ico">&#xe729;</i><b>首页</b></router-link>
-          <router-link to="/classify" active-class='active'><i class="yo-ico">&#xe612;</i><b>分类</b></router-link>
-          <router-link to="/minicar"><i class="yo-ico">&#xe678;</i><b>购物车</b></router-link>
-          <router-link to="/mine"><i class="yo-ico">&#xe629;</i><b>我</b></router-link>
+          <router-link to="/board"><i class="iconfont yo-ico">&#xe607;</i><b>首页</b></router-link>
+          <router-link to="/classify"  active-class="active"><i class="yo-ico iconfont">&#xe612;</i><b>分类</b></router-link>
+          <router-link to="/minicar"><i class="yo-ico iconfont">&#xe678;</i><b>购物车</b></router-link>
+          <router-link to="/mine"><i class="yo-ico iconfont">&#xe78c;</i><b>我</b></router-link>
         </div>
     </div>
   </div>
@@ -47,6 +60,14 @@
   import { Indicator } from 'mint-ui';
   import { Lazyload } from 'mint-ui';
   // Vue.use(Lazyload);
+  import { Navbar, TabItem } from 'mint-ui';
+
+  Vue.component(Navbar.name, Navbar);
+  Vue.component(TabItem.name, TabItem);
+  import { TabContainer, TabContainerItem } from 'mint-ui';
+
+  Vue.component(TabContainer.name, TabContainer);
+  Vue.component(TabContainerItem.name, TabContainerItem);
   import utilAxios from '../utils/axios'
   export default {
     data() {
@@ -56,12 +77,14 @@
         classifydatalist:[],
         allLoaded: false,
         count:0,
-        id:6265
+        id:6265,
+        selected:"1"
       }
     },
 
     methods:{
       abc:function(a){
+        console.log(a)
         this.id = a
         this.count = 0
         this.getdata(a)
@@ -102,7 +125,7 @@
       });
 
       utilAxios.get({
-        url: 'http://localhost:9000/classifylist',
+        url: '/static/mock/classifylist.json',
         method: 'get',
         callback: function (res) {
           that.dataSource = that.dataSource.concat(res.data.classifyList)

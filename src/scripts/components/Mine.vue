@@ -2,8 +2,8 @@
 	<div class="m-mine">
 		<header class="yo-header">
 			<h2 class="title">登录</h2>
-			<span class="regret yo-ico" @click="back">&#xf07d;</span>
-			<span class="affirm yo-ico" >&#xf07e;</span>
+			<span class="regret yo-ico iconfont" @click="back">&#xf0292;</span>
+			<span class="affirm yo-ico iconfont" >&#xe683;</span>
 		</header>
 		<section>
 			<h3 class="zhanghao">美丽说账号</h3>
