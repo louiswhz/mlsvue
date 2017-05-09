@@ -5,6 +5,7 @@ import Board from '@/scripts/components/Board'
 import Classify from '@/scripts/components/Classify'
 import Minicar from '@/scripts/components/Minicar'
 import Mine from '@/scripts/components/Mine'
+import Detail from '@/scripts/components/Detail'
 
 Vue.use(Router)
 
@@ -32,6 +33,10 @@ export default new Router({
           component: Mine
         }
       ]
+    },
+    {
+      path: '/detail/:signGoodsId',
+      component: Detail
     }
   ]
 })
