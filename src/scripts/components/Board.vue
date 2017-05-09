@@ -37,6 +37,17 @@
           </ul>
         </div>
       </div>
+      
+      <div class="ming-title"">
+          <div>好物X搭配</div>
+      </div>
+
+      <div class="ming-collocation">
+        <ul>
+          <li v-for="(item, index) in collocation2"><img :src="item.image"></li>
+        </ul>
+      </div>
+
     </section>
     <div class="m-tabbar">
         <div>
@@ -62,6 +73,8 @@
       return {
         list2:[],
         list: [],
+        collocation: [],
+        collocation2: [],
         title: ''
       }
     },
@@ -76,6 +89,15 @@
           that.title = res.data.title
           that.list = that.list.concat(res.data.data.topic[0].goodsList)
           that.list2 = that.list2.concat(res.data.data.topic[1].goodsList)
+        }
+      })
+      utilAxios.get({
+        url: '/mls/venus/collection/v1/queryTopicCollocation/android?st=1492776790&_did=e06faa906461fdb2849043851d88795f&_res=1080*1920&imei=867830028775635&_version=905&mac=20%3A82%3Ac0%3A3b%3Aa1%3A4b&_channel=MALmiui&build_serial=edc2b347&page=3&_sign=99e7025614ca30d8e5688d1ebfee305f0ba41f6c',
+        method: 'get',
+        callback: function (res) {
+          // that.collocation = that.collocation.concat(res.data.data.collocation)
+          that.collocation2 = that.collocation2.concat(res.data.data.collocation[1].goodsList)
+          console.log(res)
         }
       })
     }

@@ -91,6 +91,52 @@
       padding: .1rem;
     }
   }
+  .ming-title{
+    background: #fff;
+    text-align: center;
+    font-size: .175rem;
+    padding: .15rem 0;
+  }
+  .ming-collocation{
+    @include flexbox();
+    @include flex-direction(column);
+    background: #fff;
+    padding: 0 .15rem;
+    ul>li{
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: .15rem;
+      }
+    }
+    li:nth-of-type(1){
+      width: 2.2rem;
+      float: left;
+    }
+    li:nth-of-type(2){
+      width: 1rem;
+      float: left;
+      width: 1.22rem;
+      height: 1.075rem;
+      padding-left: .04rem;
+    }
+    li:nth-of-type(3){
+      width: 1rem;
+      float: left;
+      width: 1.22rem;
+      height: 1.075rem;
+      padding-left: .04rem;
+      margin-top: .05rem;
+    }
+    li:nth-of-type(4){
+      width: 1rem;
+      float: left;
+      width: 1.22rem;
+      height: 1.075rem;
+      padding-left: .04rem;
+      margin-top: .05rem;
+    }
+  }
 
   }
 }
