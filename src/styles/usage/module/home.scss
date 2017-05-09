@@ -47,7 +47,17 @@
         border-left: 0;
         border-right: 0;
         border-top: 0;
-      
+     
+    }
+     .shouji1{
+       font-size: .23rem;
+       line-height: .48rem;
+        width:3.42rem;
+        height:.48rem;
+        text-align: center;
+        color:#999999;
+        background: white;
+        border-bottom:0.01rem solid #ccc;   
     }
     .shouji{
        font-size: .23rem;
@@ -56,6 +66,8 @@
         height:.48rem;
         text-align: center;
         color:#999999;
+        background: white;
+    
     }
      .yzm{
         position: absolute;
