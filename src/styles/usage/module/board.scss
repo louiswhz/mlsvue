@@ -102,41 +102,106 @@
     @include flex-direction(column);
     background: #fff;
     padding: 0 .15rem;
-    ul>li{
-      img{
-        width: 100%;
-        height: 100%;
-        border-radius: .15rem;
+    text-align: center;
+    .ming-a,.ming-e,.ming-d{
+      li{
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: .15rem;
+        }
+      }
+      li:nth-of-type(1){
+        width: 2.2rem;
+        float: left;
+      }
+      li:nth-of-type(2){
+        width: 1rem;
+        float: left;
+        width: 1.22rem;
+        height: 1.075rem;
+        padding-left: .04rem;
+      }
+      li:nth-of-type(3){
+        width: 1rem;
+        float: left;
+        width: 1.22rem;
+        height: 1.075rem;
+        padding-left: .04rem;
+        margin-top: .05rem;
+      }
+      li:nth-of-type(4){
+        width: 1rem;
+        float: left;
+        width: 1.22rem;
+        height: 1.075rem;
+        padding-left: .04rem;
+        margin-top: .05rem;
       }
     }
-    li:nth-of-type(1){
-      width: 2.2rem;
-      float: left;
+    .ming-a:nth-of-type(2){
+      padding-top: .1rem;
     }
-    li:nth-of-type(2){
-      width: 1rem;
-      float: left;
-      width: 1.22rem;
-      height: 1.075rem;
-      padding-left: .04rem;
+    .ming-b{
+      li{
+        width: 100%;
+        img{
+          width: 100%;
+          border-radius: .1rem;
+        }
+      }
     }
-    li:nth-of-type(3){
-      width: 1rem;
-      float: left;
-      width: 1.22rem;
-      height: 1.075rem;
-      padding-left: .04rem;
-      margin-top: .05rem;
+    .ming-c{
+      @include flexbox();
+      overflow-x: scroll;
+      li{
+        @include flexbox();
+        @include flex-direction(column);
+        margin-top: .05rem;
+        padding-right: .03rem;
+        img{
+          border-radius: .1rem;
+          width: .8rem;
+          height: .8rem;
+        }
+      }
     }
-    li:nth-of-type(4){
-      width: 1rem;
-      float: left;
-      width: 1.22rem;
-      height: 1.075rem;
-      padding-left: .04rem;
-      margin-top: .05rem;
+    .ming-d,.ming-e{
+      margin-top: .30rem;
     }
+    .ming-f{
+      padding: .15rem 0;
+    }
+
   }
+    // .ming-d{
+    //   @include flexbox();
+    //   @include flex-direction(column);
+    //   width: 100%;
+    //   div{
+    //     img{
+    //       width: 100%;
+    //       border-radius: .1rem;
+    //     }
+    //   }
+    //   .ming-b{
+    //     @include flexbox();
+    //     overflow-x: scroll;
+    //     li{
+    //       @include flexbox();
+    //       @include flex-direction(column);
+    //       margin-top: .05rem;
+    //       padding-right: .03rem;
+    //       img{
+    //         border-radius: .1rem;
+    //         width: .8rem;
+    //         height: .8rem;
+    //       }
+    //     }
+    //   }
+    // }
+
+
 
   }
 }

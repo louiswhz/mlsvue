@@ -43,8 +43,47 @@
       </div>
 
       <div class="ming-collocation">
-        <ul>
+        <ul class="ming-a">
           <li v-for="(item, index) in collocation2"><img :src="item.image"></li>
+        </ul>
+        <ul class="ming-f">
+          <p v-for="(item, index) in collocation3">{{item.title}}</p>
+          <p v-for="(item, index) in collocation3">{{item.subTitle}}</p>
+        </ul>
+        <ul class="ming-b">
+          <li v-for="(item, index) in collocation"><img :src="item.image"></li>
+        </ul>
+        <ul class="ming-c">
+          <li v-for="(item, index) in list"><img :src="item.image"></li>
+        </ul>
+        
+        <ul class="ming-d">
+          <li v-for="(item, index) in collocation4"><img :src="item.image"></li>
+        </ul>
+        <ul class="ming-f">
+          <p v-for="(item, index) in collocation8">{{item.title}}</p>
+          <p v-for="(item, index) in collocation8">{{item.subTitle}}</p>
+        </ul>
+        <ul class="ming-b">
+          <li v-for="(item, index) in collocation6"><img :src="item.image"></li>
+        </ul>
+        <ul class="ming-c">
+          <li v-for="(item, index) in list2"><img :src="item.image"></li>
+        </ul>
+        
+
+        <ul class="ming-e">
+          <li v-for="(item, index) in collocation5"><img :src="item.image"></li>
+        </ul>
+        <ul class="ming-f">
+          <p v-for="(item, index) in collocation9">{{item.title}}</p>
+          <p v-for="(item, index) in collocation9">{{item.subTitle}}</p>
+        </ul>
+        <ul class="ming-b">
+          <li v-for="(item, index) in collocation7"><img :src="item.image"></li>
+        </ul>
+        <ul class="ming-c">
+          <li v-for="(item, index) in list3"><img :src="item.image"></li>
         </ul>
       </div>
 
@@ -71,10 +110,18 @@
   export default {
     data(){
       return {
-        list2:[],
         list: [],
+        list2:[],
+        list3:[],
         collocation: [],
         collocation2: [],
+        collocation3: [],
+        collocation4: [],
+        collocation5: [],
+        collocation6: [],
+        collocation7: [],
+        collocation8: [],
+        collocation9: [],
         title: ''
       }
     },
@@ -89,14 +136,22 @@
           that.title = res.data.title
           that.list = that.list.concat(res.data.data.topic[0].goodsList)
           that.list2 = that.list2.concat(res.data.data.topic[1].goodsList)
+          that.list3 = that.list3.concat(res.data.data.topic[2].goodsList)
         }
       })
       utilAxios.get({
         url: '/mls/venus/collection/v1/queryTopicCollocation/android?st=1492776790&_did=e06faa906461fdb2849043851d88795f&_res=1080*1920&imei=867830028775635&_version=905&mac=20%3A82%3Ac0%3A3b%3Aa1%3A4b&_channel=MALmiui&build_serial=edc2b347&page=3&_sign=99e7025614ca30d8e5688d1ebfee305f0ba41f6c',
         method: 'get',
         callback: function (res) {
-          // that.collocation = that.collocation.concat(res.data.data.collocation)
-          that.collocation2 = that.collocation2.concat(res.data.data.collocation[1].goodsList)
+          that.collocation = that.collocation.concat(res.data.data.topic[0])
+          that.collocation6 = that.collocation6.concat(res.data.data.topic[1])
+          that.collocation7 = that.collocation7.concat(res.data.data.topic[2])
+          that.collocation2 = that.collocation2.concat(res.data.data.collocation[0].goodsList)
+          that.collocation4 = that.collocation4.concat(res.data.data.collocation[1].goodsList)
+          that.collocation5 = that.collocation5.concat(res.data.data.collocation[2].goodsList)
+          that.collocation3 = that.collocation3.concat(res.data.data.collocation[0])
+          that.collocation8 = that.collocation8.concat(res.data.data.collocation[1])
+          that.collocation9 = that.collocation9.concat(res.data.data.collocation[2])
           console.log(res)
         }
       })
