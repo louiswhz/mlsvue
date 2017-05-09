@@ -5,9 +5,9 @@
 	
 	<section>
 		<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" :autoFill="false" ref="loadmore">
-
+       
 	  <div class="car_tis">
-	    <p>温馨提示：现在登录，你可以同步电脑和手机购物车中的商品.</p><span>登录</span>
+	    <p>温馨提示：现在登录，你可以同步电脑和手机购物车中的商品.</p><router-link to="/board" tag="span">登录</router-link>
 	  </div>
 	  
 	  <div class="car_go">
@@ -22,8 +22,8 @@
 	  	
 		<h3>猜你喜欢</h3>
 		<div class="love_list">
-
-		  	<div class="beau_girl" v-for="(item, index) in list">
+           <router-link :key="index" :to="`/tobuy/${item.signGoodsId
+}`" tag="div" class="beau_girl" v-for="(item, index) in list">        
 		  		<div class="girl_tu">
 		  			<img v-lazy.container="item.image"/>
 		  		</div>
@@ -34,7 +34,8 @@
 		  				<span v-html="item.collectNum"></span>
 		  			</span>
 		  		</div>	 		
-		  	</div>
+		  	
+		  	</router-link>  
 	  	</div>	
 	  		  	
 	 </div>	 
@@ -114,6 +115,7 @@
 	        method: 'get',
 	        
 	        callback: function (res) {
+	        	console.log(res)
 	          that.title = res.data.data.rows
 	          that.list = that.list.concat(res.data.data.rows)
 	          Indicator.close()
