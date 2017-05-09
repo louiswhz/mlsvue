@@ -1,0 +1,89 @@
+@charset 'UTF-8';
+
+@import "../fragment/yo-header";
+
+@include yo-header(
+  $bgcolor: #fff,
+  $color: #000,
+  $font-size: .16rem,
+  $item-ico-color: #000
+){
+  font-weight: 100;
+  height:.4rem;
+  @include border(0 0 0 0,#000)
+  .regret {
+    font-size: .19rem !important;
+    &.hide {
+      display: none
+    }
+  }
+}
+
+.m-home{
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  header{
+    height:.46rem;
+    width: 100%;
+    z-index: 10;
+    color:#424242;
+      
+  }
+ section{
+    overflow-y: scroll;
+    @include flex();
+    @include flex-direction(column);
+    width: 100%;
+    text-align: center;
+     background: white;
+    .zhanghao{
+       font-size: .13rem; 
+       margin-top:.12rem;
+       margin-bottom:.12rem;
+      
+    }
+    input{
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+     
+    }
+     .shouji1{
+       font-size: .23rem;
+       line-height: .48rem;
+        width:3.42rem;
+        height:.48rem;
+        text-align: center;
+        color:#999999;
+        background: white;
+        border-bottom:0.01rem solid #ccc;   
+    }
+    .shouji{
+       font-size: .23rem;
+       line-height: .48rem;
+        width:3.42rem;
+        height:.48rem;
+        text-align: center;
+        color:#999999;
+        background: white;
+    
+    }
+     .yzm{
+        position: absolute;
+        right:.15rem;
+        color:#ff3064;
+        top:2.85rem;
+       }
+     .zhuce{
+        width:3.44rem;
+        height:.52rem;
+        border-radius: .05rem;
+        margin-top:.26rem;
+        border-bottom: 0;
+        font-size: .15rem;
+        color:white;
+       background: #ff3366;
+    }  
+   } 
+}

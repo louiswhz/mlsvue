@@ -2,6 +2,9 @@
 	@include flex();
   overflow-y:scroll;
   width:100%;
+  .mint-loadmore{
+    background:#fff;
+  }
   .a-classify {
     height: .47rem;
     margin-top: .1rem;
@@ -38,9 +41,11 @@
     padding:0 .225rem;
     padding-bottom: .14rem;
     i{
-      display:block;
-      @include border(0 0 2px 0,#000)
+      display:block;      
       padding: .08rem 0;
+      &.active{
+        @include border(0 0 2px 0,#000)
+      }
     }
   }
   .c-fashion-list{
