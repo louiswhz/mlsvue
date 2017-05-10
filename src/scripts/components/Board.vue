@@ -38,7 +38,7 @@
         </div>
       </div>
       
-      <div class="ming-title"">
+      <div class="ming-title">
           <div>好物X搭配</div>
       </div>
 
@@ -152,7 +152,6 @@
           that.collocation3 = that.collocation3.concat(res.data.data.collocation[0])
           that.collocation8 = that.collocation8.concat(res.data.data.collocation[1])
           that.collocation9 = that.collocation9.concat(res.data.data.collocation[2])
-          console.log(res)
         }
       })
     }

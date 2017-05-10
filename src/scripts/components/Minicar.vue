@@ -112,7 +112,6 @@
 	        method: 'get',
 	        
 	        callback: function (res) {
-	        	console.log(res)
 	          that.title = res.data.data.rows
 	          that.list = that.list.concat(res.data.data.rows)
 	          Indicator.close()

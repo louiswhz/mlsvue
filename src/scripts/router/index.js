@@ -9,6 +9,7 @@ import Detail from '@/scripts/components/Detail'
 import Home from '@/scripts/components/Home'
 import ToBuy from '@/scripts/components/ToBuy'
 import Home from '@/scripts/components/Home'
+import Search from '@/scripts/components/Search'
 
 
 Vue.use(Router)
@@ -39,7 +40,11 @@ export default new Router({
         {
           path: 'home',
           component: Home
-      	}
+      	},
+        {
+          path: 'search',
+          component: Search
+        }
       ]
     },
     {
