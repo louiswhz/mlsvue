@@ -12,6 +12,12 @@ $base-color: #00b38a;
   src: url('/static/iconfont/iconfont.woff') format('woff'),
   url('/static/iconfont/iconfont.ttf') format('truetype')
 }
+
+@font-face {
+  font-family: 'yofont';
+  src: url('/static/iconfont/iconfont6.woff') format('woff'),
+  url('/static/iconfont/iconfont6.ttf') format('truetype')
+}
 @import "../fragment/yo-header";
 
 @include yo-header(

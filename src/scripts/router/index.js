@@ -8,10 +8,10 @@ import Mine from '@/scripts/components/Mine'
 import Detail from '@/scripts/components/Detail'
 import Home from '@/scripts/components/Home'
 import ToBuy from '@/scripts/components/ToBuy'
-import Home from '@/scripts/components/Home'
 
 
 Vue.use(Router)
+
 
 export default new Router({
   routes: [

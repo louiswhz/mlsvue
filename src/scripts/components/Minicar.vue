@@ -54,10 +54,10 @@
       	 <span class="car_js">去结算(<i>0</i>)</span>
       </div>
 	        <div>
-	          <router-link to="/board"><i class="iconfont yo-ico">&#xe607;</i><b>首页</b></router-link>
-	          <router-link to="/classify"><i class="yo-ico iconfont">&#xe612;</i><b>分类</b></router-link>
-	          <router-link to="/minicar"  active-class="active"><i class="yo-ico iconfont">&#xe678;</i><b>购物车</b></router-link>
-	          <router-link to="/mine"><i class="yo-ico iconfont">&#xe78c;</i><b>我</b></router-link>
+	          <router-link to="/board"><i class="yo-ico">&#xe6e2;</i><b>首页</b></router-link>
+	          <router-link to="/classify"><i class="yo-ico">&#xe646;</i><b>分类</b></router-link>
+	          <router-link to="/minicar"  active-class="active"><i class="yo-ico">&#xe605;</i><b>购物车</b></router-link>
+	          <router-link to="/mine"><i class="yo-ico">&#xe60b;</i><b>我</b></router-link>
 	       </div>
 	    </div>
 	    			
