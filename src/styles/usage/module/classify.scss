@@ -2,6 +2,9 @@
 	@include flex();
   overflow-y:scroll;
   width:100%;
+  .mint-loadmore{
+    background:#fff;
+  }
   .a-classify {
     height: .47rem;
     margin-top: .1rem;
@@ -30,17 +33,24 @@
     }
   }
   .pop-hot-new{
-    @include flexbox();
-    @include justify-content(space-between);
-    background: #fff;
-    margin-top: .1rem;
-    font-size: .15rem;
-    padding:0 .225rem;
-    padding-bottom: .14rem;
-    i{
-      display:block;
-      @include border(0 0 2px 0,#000)
+    .mint-navbar{
+      @include flexbox();
+      @include justify-content(space-between);
+      background: #fff;
+      margin-top: .1rem;
+      font-size: .15rem;
+      padding:0 .225rem;
+      padding-bottom: .14rem;
+    }   
+    .mint-tab-item{
+      flex:inherit;
+      display:inline-block;
+      color:#000;    
       padding: .08rem 0;
+      &.is-selected{
+        @include border(0 0 2px 0,#000)
+        border-bottom:none;
+      }
     }
   }
   .c-fashion-list{

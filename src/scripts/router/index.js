@@ -5,6 +5,11 @@ import Board from '@/scripts/components/Board'
 import Classify from '@/scripts/components/Classify'
 import Minicar from '@/scripts/components/Minicar'
 import Mine from '@/scripts/components/Mine'
+import Detail from '@/scripts/components/Detail'
+// import Home from '@/scripts/components/Home'
+import ToBuy from '@/scripts/components/ToBuy'
+import Home from '@/scripts/components/Home'
+
 
 Vue.use(Router)
 
@@ -30,8 +35,22 @@ export default new Router({
         {
           path: 'mine',
           component: Mine
-        }
+        },
+        {
+          path: 'home',
+          component: Home
+      	}
       ]
+    },
+    {
+
+      path: '/tobuy/:id',
+      component: ToBuy
+    },
+    {
+      path: '/detail/:signGoodsId',
+      component: Detail
+
     }
   ]
 })
