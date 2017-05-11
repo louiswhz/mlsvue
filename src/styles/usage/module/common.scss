@@ -8,7 +8,7 @@ $base-color: #00b38a;
 }
 
 @font-face {
-  font-family: 'iconfont';
+  font-family: 'yofont';
   src: url('/static/iconfont/iconfont.woff') format('woff'),
   url('/static/iconfont/iconfont.ttf') format('truetype')
 }
@@ -36,7 +36,13 @@ $base-color: #00b38a;
     }
   }
   .left{
-    left:0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .6rem;
+    text-align: left;
+    padding-left: .15rem;
+    color:#000;
   }
 }
 .m-tabbar {
