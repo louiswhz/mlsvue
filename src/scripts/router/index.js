@@ -8,11 +8,9 @@ import Mine from '@/scripts/components/Mine'
 import Detail from '@/scripts/components/Detail'
 import Home from '@/scripts/components/Home'
 import ToBuy from '@/scripts/components/ToBuy'
-<<<<<<< HEAD
-=======
-import Home from '@/scripts/components/Home'
+
 import Search from '@/scripts/components/Search'
->>>>>>> master
+
 
 
 Vue.use(Router)
