@@ -1,10 +1,6 @@
 <template>
   <div class="m-board">
-    <div class="yo-header">
-        <h2 class="title">美丽说</h2>
-        <span>&#xe60a;</span>
-        <span class="affirm yo-ico">&#xe60d;</span>
-    </div>
+    <Header></Header>
     <section>
       <mt-swipe :auto="1625">
         <mt-swipe-item><img src="https://s2.mogucdn.com/mlcdn/c45406/170504_713jjf6ig2da11ebbgdcll76a0ccl_750x500.jpg_750x999.v1c7E.70.webp"></mt-swipe-item :key="index">
@@ -101,6 +97,8 @@
 
 <script>
   import Vue from 'vue'
+  import Header from './Header'
+  Vue.component('Header',Header)
   import { Swipe, SwipeItem } from 'mint-ui'
   import 'mint-ui/lib/style.css'
   Vue.component(Swipe.name, Swipe)

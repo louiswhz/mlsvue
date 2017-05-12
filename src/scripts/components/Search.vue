@@ -1,13 +1,18 @@
 <template lang="html">
   <div class="m-search">
-<!--     <div class="yo-search yo-search-a">
+    <div class="yo-header">
+        <h2 class="title">美丽说</h2>
+        <span @click="back" class="yo-ico affirm left">&#xf0292;</span>
+        <span class="affirm yo-ico">&#xe7ee;</span>
+    </div>
+    <div class="yo-search yo-search-a">
       <label class="action">
         <span class="yo-ico"></span>
-        <input type="text" @keyup.enter="search" v-model="keywords" class="input input-shrink" placeholder="输入搜索关键字...">
+        <input type="text" class="input input-shrink" placeholder="输入搜索关键字...">
       </label>
-      <span class="cancel" @click="cancel">取消</span>
+      <span class="cancel">取消</span>
     </div>
-    <div class="result">
+    <!-- <div class="result">
       <router-link :key="index" :to="`/detail/${item.id}`" tag="dl" v-for="(item, index) in list">
         <dt>
           <img v-lazy.container="item.images.large"/>
@@ -24,19 +29,20 @@
 </template>
 
 <script>
-import Vue from 'vue'
+// import Vue from 'vue'
 
-import { Indicator } from 'mint-ui';
+// import { Indicator } from 'mint-ui';
 
-import utilAxios from '../utils/axios'
+// import utilAxios from '../utils/axios'
 
-export default {
+// export default {
   // data(){
   //   return {
   //     keywords: '',
   //     list: []
   //   }
   // },
+ 
 
   // methods: {
   //   search: function () {
@@ -60,7 +66,23 @@ export default {
   //     this.keywords = ''
   //   }
   // }
-}
+// }
+ // let vm = {
+ //  methods: {
+ //      back: function () {
+ //        this.$router.go(-1)
+ //      }
+ //    }
+ //  }
+ //  window.vm = vm
+  export default {
+    methods:{
+      back: function () {
+        this.$router.go(-1)
+      }
+    }
+  }
+
 </script>
 
 <style lang="css">

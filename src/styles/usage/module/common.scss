@@ -13,6 +13,7 @@ $base-color: #00b38a;
   url('/static/iconfont/iconfont.ttf') format('truetype')
 }
 @import "../fragment/yo-header";
+@import "../fragment/yo-search";
 
 @include yo-header(
   $bgcolor: #fff,
